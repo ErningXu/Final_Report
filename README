@@ -1,0 +1,27 @@
+This project focuses on predicting the productivity of garment workers using a machine learning approach, based on the Productivity Prediction of Garment Employees dataset.
+
+Project Description:
+Preprocessed the data using a combination of StandardScaler for numerical features and OneHotEncoder/OrdinalEncoder for categorical features.
+Addressed missing values using a reduced feature pattern method.
+Applied Time Series Split to maintain the temporal structure of the data: train, validation, and test sets were divided into sequential time periods.
+Trained and evaluated the following machine learning models:
+Linear Models: Ridge Regression, Lasso Regression
+Non-Linear Models: Random Forest, K-Nearest Neighbors (KNN), Support Vector Regressor (SVR)
+Performed hyperparameter tuning for each model to improve performance.
+Used Mean Absolute Error (MAE) as the primary evaluation metric due to its interpretability and robustness against outliers.
+
+Results:
+The best-performing model was Random Forest, achieving a Mean Absolute Error (MAE) of 0.119, slightly better than the baseline (MAE = 0.120).
+Feature importance analysis (Permutation Importance, Gain-Based Importance, and SHAP) revealed that:
+Top Features: targeted_productivity, smv, and over_time
+Least Important Features: is_weekend, team-specific variables (e.g., team_7, team_8)
+
+Required Library Versions:
+Python version is 3.12.5
+numpy version 1.26.4 is installed.
+matplotlib version 3.9.2 is installed.
+sklearn version 1.5.1 is installed.
+pandas version 2.2.2 is installed.
+xgboost version 2.1.1 is installed.
+shap version 0.45.1 is installed.
+plotly version 5.23.0 is installed.
